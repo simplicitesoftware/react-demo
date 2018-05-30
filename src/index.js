@@ -21,11 +21,7 @@ class Demo extends React.Component {
 		let self = this;
 		_loadScript(self.props.url + "/scripts/ajax/bundle.js", function() {
 			let app = new window.Simplicite.Ajax(self.props.url, "api", self.props.username, self.props.password);
-			console.log(app);
-			self.setState(app);
 			app.getGrant(function() {
-				console.log(app.grant);
-				console.log("Signed in as " + app.grant.login);
 				self.setState(app);
 			});
 		});
