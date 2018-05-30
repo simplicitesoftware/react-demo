@@ -23,13 +23,25 @@ class Demo extends React.Component {
 			let app = new window.Simplicite.Ajax(self.props.url, "api", self.props.username, self.props.password);
 			app.getGrant(function() {
 				self.setState(app);
+				let prd = app.getBusinessObject("DemoProduct");
+				prd.search(function() {
+					app.products = prd.list;
+					console.log(app.products);
+					self.setState(app);
+				});
 			});
 		});
 	}
 
 	render() {
 		return (
-			<div>{ this.state.grant && this.state.grant.login  ? "Hello " + this.state.grant.login + "!" : "(Loading...)" }</div>
+			<div>{ this.state.grant && this.state.grant.login ? "Hello " + this.state.grant.login + "!" : "" }
+				<ul>
+					{ this.state.products && this.state.products.map(item =>
+          					<li key={ item.row_id }>{ item.demoPrdName }</li>
+					) }
+				</ul>
+			</div>
 		);
 
 	}
