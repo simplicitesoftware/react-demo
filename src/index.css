@@ -1,4 +1,13 @@
 body {
-  font: 14px Verdana, Arial, sans-serif;
-  margin: 20px;
+	font: 14px Verdana, Arial, sans-serif;
+	margin: 20px;
+}
+td {
+	padding: 10px;
+}
+.product .name {
+	font-weight: bold;
+}
+.product .reference {
+	color: #777;
 }
