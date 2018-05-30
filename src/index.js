@@ -2,15 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function _loadScript(src, callback) {
-	var script = document.createElement("script");
-	script.type = "text/javascript";
-	script.async = true
-	script.src = src;
-	script.onload = callback;
-	document.head.appendChild(script);
-}
-
 class Demo extends React.Component {
 	constructor(props) {
 		super(props);
@@ -18,6 +9,15 @@ class Demo extends React.Component {
 	}
 
 	componentWillMount() {
+		function _loadScript(src, callback) {
+			var script = document.createElement("script");
+			script.type = "text/javascript";
+			script.async = true
+			script.src = src;
+			script.onload = callback;
+			document.head.appendChild(script);
+		}
+
 		let self = this;
 		_loadScript(self.props.url + "/scripts/ajax/bundle.js", function() {
 			let app = new window.Simplicite.Ajax(self.props.url, "api", self.props.username, self.props.password);
