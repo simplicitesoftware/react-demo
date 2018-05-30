@@ -31,7 +31,7 @@ class Demo extends React.Component {
 				prd.search(function() {
 					app.products = prd.list; // Put the search result in an "easy(ier)" location in state object
 					self.setState(app); // Set state to trigger render
-				});
+				}, null, { inlineThumbs: true });
 			});
 		});
 	}
@@ -41,7 +41,7 @@ class Demo extends React.Component {
 			<div>{ this.state.grant && this.state.grant.login ? "Hello " + this.state.grant.login + "!" : "" }
 				<ul>
 					{ this.state.products && this.state.products.map(item =>
-          					<li key={ item.row_id }>{ item.demoPrdName }</li>
+          					<li key={ item.row_id }><img alt={ item.demoPrdReference } src={ "data:" + item.mime + ";base64," + item.demoPrdPicture.thumbnail }/>&nbsp;{ item.demoPrdName }</li>
 					) }
 				</ul>
 			</div>
