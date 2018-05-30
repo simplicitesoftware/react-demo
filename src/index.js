@@ -9,7 +9,7 @@ class Demo extends React.Component {
 	}
 
 	componentWillMount() {
-		function _loadScript(src, callback) {
+		function loadScript(src, callback) {
 			var script = document.createElement("script");
 			script.type = "text/javascript";
 			script.async = true
@@ -19,7 +19,7 @@ class Demo extends React.Component {
 		}
 
 		let self = this;
-		_loadScript(self.props.url + "/scripts/ajax/bundle.js", function() {
+		loadScript(self.props.url + "/scripts/ajax/bundle.js", function() {
 			let app = new window.Simplicite.Ajax(self.props.url, "api", self.props.username, self.props.password);
 			app.getGrant(function() {
 				self.setState(app);
