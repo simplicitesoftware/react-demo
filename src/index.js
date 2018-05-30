@@ -22,31 +22,44 @@ class Demo extends React.Component {
 		// Asynchronously load the Ajax lib bundle...
 		loadScript(self.props.url + "/scripts/ajax/bundle.js", function() {
 			// ...then instanciate the app from the properties...
-			let app = new window.Simplicite.Ajax(self.props.url, "api", self.props.username, self.props.password);
-			// ...then load the user grant...
-			app.getGrant(function() {
-				self.setState(app); // Set state to trigger render
-				// ...then search for products
-				let prd = app.getBusinessObject("DemoProduct");
-				prd.search(function() {
-					app.products = prd.list; // Put the search result in an "easy(ier)" location in state object
-					self.setState(app); // Set state to trigger render
-				}, null, { inlineThumbs: true });
-			});
+			window.app = new window.Simplicite.Ajax(self.props.url, "api", self.props.username, self.props.password);
+			// ...then load the user grant
+			window.app.getGrant(function() { self.setState(window.app); });
 		});
 	}
 
 	render() {
 		return (
-			<div>{ this.state.grant && this.state.grant.login ? "Hello " + this.state.grant.login + "!" : "" }
-				<ul>
-					{ this.state.products && this.state.products.map(item =>
-						<li key={ item.row_id }><img alt={ item.demoPrdReference } src={ "data:" + item.mime + ";base64," + item.demoPrdPicture.thumbnail }/>&nbsp;{ item.demoPrdName }</li>
-					) }
-				</ul>
+			<div>
+				{ this.state.grant ? "Hello " + this.state.grant.login + "!" : "" }
+				{ this.state.grant && <DemoProduct/> }
 			</div>
 		);
 
+	}
+};
+
+class DemoProduct extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
+
+	componentWillMount() {
+		let self = this;
+		let prd = window.app.getBusinessObject("DemoProduct");
+		// Search for products
+		prd.search(function() { self.setState(prd); }, null, { inlineThumbs: true });
+	}
+
+	render() {
+		return (
+			<ul>
+				{ this.state.list && this.state.list.map(item =>
+					<li key={ item.row_id }><img alt={ item.demoPrdReference } src={ "data:" + item.mime + ";base64," + item.demoPrdPicture.thumbnail }/>&nbsp;{ item.demoPrdName }</li>
+				) }
+			</ul>
+		);
 	}
 };
 
