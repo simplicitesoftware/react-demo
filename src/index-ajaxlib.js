@@ -30,9 +30,9 @@ class Demo extends React.Component {
 		// Asynchronously load the Ajax lib bundle...
 		loadScript(self.props.url + '/scripts/ajax/bundle.js', function() {
 			// ...then instanciate the app from the properties...
-			window.app = new window.Simplicite.Ajax(self.props.url, 'api', self.props.username, self.props.password);
+			global.app = new window.Simplicite.Ajax(self.props.url, 'api', self.props.username, self.props.password);
 			// ...then load the user grant
-			window.app.getGrant(function(grant) { self.setState(grant); });
+			global.app.getGrant(function(grant) { self.setState(grant); });
 		});
 	}
 
@@ -55,7 +55,7 @@ class DemoProduct extends React.Component {
 
 	componentWillMount() {
 		let self = this;
-		let prd = window.app.getBusinessObject('DemoProduct');
+		let prd = global.app.getBusinessObject('DemoProduct');
 		// Search for products
 		prd.search(function() { self.setState(prd); }, null, { inlineThumbs: true });
 	}

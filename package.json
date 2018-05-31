@@ -6,7 +6,7 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4",
-    "simplicite": "latest"
+    "simplicite": "^1.0.3"
   },
   "main": "index.js",
   "scripts": {

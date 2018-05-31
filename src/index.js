@@ -11,12 +11,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-let app;
-
 class Demo extends React.Component {
 	constructor(props) {
 		super(props);
-		app = require('simplicite').session({
+		global.app = require('simplicite').session({
 			url: props.url,
 			username: props.username,
 			password: props.password,
@@ -27,14 +25,14 @@ class Demo extends React.Component {
 
 	componentWillMount() {
 		let self = this;
-		app.login().then(function(params) {
+		global.app.login().then(function(params) {
 			console.log('Logged in as ' + params.username);
-			return app.getGrant({ inlinePicture: true }); // next promise
+			return global.app.getGrant({ inlinePicture: true }); // next promise
 		}, function(reason) {
-			app = undefined;
+			global.app = undefined;
 			console.error('Login failed (status: ' + reason.status + ', message: ' + reason.message + ')');
 		}).then(function(grant) {
-			if (!app) return;
+			if (!global.app) return;
 			self.setState(grant);
 		});
 	}
@@ -57,7 +55,7 @@ class DemoProduct extends React.Component {
 
 	componentWillMount() {
 		let self = this;
-		let prd = app.getBusinessObject('DemoProduct');
+		let prd = global.app.getBusinessObject('DemoProduct');
 		prd.search(null, { inlineThumbs: true }).then(function(list) {
 			self.setState({ list: list });
 		});
