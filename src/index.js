@@ -24,15 +24,15 @@ class Demo extends React.Component {
 			// ...then instanciate the app from the properties...
 			window.app = new window.Simplicite.Ajax(self.props.url, "api", self.props.username, self.props.password);
 			// ...then load the user grant
-			window.app.getGrant(function() { self.setState(window.app); });
+			window.app.getGrant(function(grant) { self.setState(grant); });
 		});
 	}
 
 	render() {
 		return (
 			<div>
-				{ this.state.grant ? "Hello " + this.state.grant.login + "!" : "" }
-				{ this.state.grant && <DemoProduct/> }
+				{ this.state.login ? "Hello " + this.state.login + "!" : "" }
+				{ this.state.login && <DemoProduct/> }
 			</div>
 		);
 
