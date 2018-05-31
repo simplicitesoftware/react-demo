@@ -4,7 +4,7 @@
 React demo
 ==========
 
-This project is a **very basic** web front-end demo written in [React](https://reactjs.org/) using the Simplicit&eacute;&reg; Ajax library.
+This project is a **very basic** web front-end demo written in [React](https://reactjs.org/) using the Simplicit&eacute;&reg; node.js and Ajax libraries.
 
 Install:
 
