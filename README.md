@@ -1,13 +1,17 @@
 ![Simplicit&eacute; Software](https://www.simplicite.io/resources/logos/logo250.png)
-***
+* * *
 
-React demo
-==========
+React&reg; demo
+===============
 
-This project is a **very basic** web front-end demo written in [React](https://reactjs.org/), there are two examples:
+This project is a **very basic** web frontend demo written in [React&reg;](https://reactjs.org/), there are two examples:
 
-- One (`src/index.js`) is using the [Simplicit&eacute;&reg; node.js & browser library](https://github.com/simplicitesoftware/nodejs-api)
+- One (`src/index.js`) is using the [Simplicit&eacute;&reg; node.js &amp; browser library](https://github.com/simplicitesoftware/nodejs-api)
 - The other (`src/index-ajaxlib.js``) is dynamically loading and using the instance's standard Ajax library
+
+Prerequisites:
+
+	sudo npm install -g create-react-app
 
 Install:
 
