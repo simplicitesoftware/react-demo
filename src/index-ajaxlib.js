@@ -62,11 +62,11 @@ class DemoProduct extends React.Component {
 
 	render() {
 		return (
-			<table className='product'>
+			<table className='products'>
 				<tbody>
 					{ this.state.list && this.state.list.map(item =>
 					<tr key={ item.row_id }>
-						<td><img alt={ item.demoPrdReference } src={ 'data:' + item.mime + ';base64,' + item.demoPrdPicture.thumbnail }/></td>
+						<td><img alt={ item.demoPrdReference } src={ 'data:image/png;base64,' + item.demoPrdPicture.thumbnail }/></td>
 						<td>
 							<div className='name'>{ item.demoPrdName }</div>
 							<div className='reference'>{ item.demoPrdReference }</div>

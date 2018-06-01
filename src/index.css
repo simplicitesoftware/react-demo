@@ -9,10 +9,10 @@ table, tr, th, td  {
 th, td {
 	padding: 10px;
 }
-.product .name {
+.products .name {
 	font-weight: bold;
 }
-.product .reference {
+.products .reference {
 	font-style: italic;
 	color: #777;
 }
