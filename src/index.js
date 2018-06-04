@@ -4,7 +4,6 @@
  * |___/_|_|_|_| .__/_|_\__|_|\__\___|
  *             |_|                    
  * This example is using the Simplicite node.js & browser JavaScript API
- * https://github.com/simplicitesoftware/nodejs-api
  */
 
 import React from 'react';
