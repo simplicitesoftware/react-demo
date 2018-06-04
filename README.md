@@ -6,7 +6,7 @@ React&reg; demo
 
 This project is a **very basic** web frontend demo written in [React&reg;](https://reactjs.org/), there are two examples:
 
-- One (`src/index.js`) is using the [Simplicit&eacute;&reg; node.js &amp; browser library](https://github.com/simplicitesoftware/nodejs-api)
+- One (`src/index.js`) is using the [Simplicit&eacute;&reg; node.js &amp; browser JavaScript library](https://github.com/simplicitesoftware/nodejs-api)
 - The other (`src/index-ajaxlib.js``) is dynamically loading and using the instance's standard Ajax library
 
 Prerequisites:
