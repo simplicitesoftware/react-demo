@@ -3,7 +3,7 @@
  * \__ \ | '  \| '_ \ | / _| |  _/ -_)
  * |___/_|_|_|_| .__/_|_\__|_|\__\___|
  *             |_|                    
- * This example is using the 'simplicite' node.js API
+ * This example is using the Simplicite node.js & browser JavaScript API
  * https://github.com/simplicitesoftware/nodejs-api
  */
 
@@ -27,13 +27,12 @@ class Demo extends React.Component {
 		let self = this;
 		global.app.login().then(function(params) {
 			console.log('Logged in as ' + params.username);
-			return global.app.getGrant({ inlinePicture: true }); // next promise
-		}, function(reason) {
+			return global.app.getGrant({ inlinePicture: true }).then(function(grant) {
+				self.setState(grant);
+			});
+		}).fail(function(reason) {
 			global.app = undefined;
-			console.error('Login failed (status: ' + reason.status + ', message: ' + reason.message + ')');
-		}).then(function(grant) {
-			if (!global.app) return;
-			self.setState(grant);
+			console.error('ERROR: Login failed (status: ' + reason.status + ', message: ' + reason.message + ')');
 		});
 	}
 

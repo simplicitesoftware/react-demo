@@ -3,7 +3,8 @@
  * \__ \ | '  \| '_ \ | / _| |  _/ -_)
  * |___/_|_|_|_| .__/_|_\__|_|\__\___|
  *             |_|
- * This example is using the default ajax lib from the targetted server
+ * This example is dynamically loading and using the standard Ajax lib
+ * from the target instance
  */
 
 import React from 'react';
