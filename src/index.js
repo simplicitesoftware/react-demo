@@ -5,15 +5,15 @@
  *             |_|                    
  * This example is using the Simplicite node.js & browser JavaScript API
  */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Simplicite from 'simplicite';
 import './index.css';
 
 class Demo extends React.Component {
 	constructor(props) {
 		super(props);
-		global.app = require('simplicite').session({
+		global.app = Simplicite.session({
 			url: props.url,
 			username: props.username,
 			password: props.password,

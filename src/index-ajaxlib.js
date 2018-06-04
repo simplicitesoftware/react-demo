@@ -5,7 +5,6 @@
  *             |_|
  * This example is dynamically loading and using the standard Ajax lib from the target instance
  */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
