@@ -31,14 +31,15 @@ class Demo extends React.Component {
 			});
 		}).fail(function(reason) {
 			global.app = undefined;
-			console.error('ERROR: Login failed (status: ' + reason.status + ', message: ' + reason.message + ')');
+			self.setState({ error: 'Login failed (status: ' + reason.status + ', message: ' + reason.message + ')' });
 		});
 	}
 
 	render() {
 		return (
 			<div>
-				{ this.state.login ? 'Hello ' + this.state.login + '!' : '' }
+				{ this.state.error && 'Error: ' + this.state.error }
+				{ this.state.login && 'Hello ' + this.state.login + '!' }
 				{ this.state.login && <DemoProduct/> }
 			</div>
 		);
