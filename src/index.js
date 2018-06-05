@@ -61,7 +61,7 @@ class DemoProduct extends React.Component {
 
 	render() {
 		return (
-			<table className='products'>
+			<table id='products'>
 				<tbody>
 					{ this.state.list && this.state.list.map(item =>
 					<tr key={ item.row_id }>
@@ -69,6 +69,7 @@ class DemoProduct extends React.Component {
 						<td>
 							<div className='name'>{ item.demoPrdName }</div>
 							<div className='reference'>{ item.demoPrdReference }</div>
+							<div className='description'>{ item.demoPrdDescription }</div>
 						</td>
 					</tr>
 					) }
