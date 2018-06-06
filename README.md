@@ -11,23 +11,33 @@ This project is a **very basic** web frontend demo written in [React&reg;](https
 
 Prerequisites:
 
-	sudo npm install -g create-react-app
+```bash
+sudo npm install -g create-react-app
+```
 
 Install:
 
-	npm install
+```bash
+npm install
+```
 
 Run in dev mode:
 
-	npm start
+```bash
+npm start
+```
 
 Build for prod: 
 
-	npm run build
+```bash
+npm run build
+```
 
 Serve:
 
-	npm run serve
+```bash
+npm run serve
+```
 
 License
 =======
