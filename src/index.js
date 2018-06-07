@@ -38,8 +38,8 @@ class Demo extends React.Component {
 	render() {
 		return (
 			<div>
-				{ this.state.error && 'Error: ' + this.state.error }
-				{ this.state.login && 'Hello ' + this.state.login + '!' }
+				{ this.state.error && <div className='error'>Error: { this.state.error }</div> }
+				{ this.state.login && <div>Hello { this.state.login }!</div> }
 				{ this.state.login && <DemoProduct/> }
 			</div>
 		);
