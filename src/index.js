@@ -26,7 +26,7 @@ class Demo extends React.Component {
 		let self = this;
 		global.app.login().then(function(params) {
 			console.log('Logged in as ' + params.username);
-			return global.app.getGrant({ inlinePicture: true }).then(function(grant) {
+			global.app.getGrant({ inlinePicture: true }).then(function(grant) {
 				self.setState(grant);
 			});
 		}).fail(function(reason) {
