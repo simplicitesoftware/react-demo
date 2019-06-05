@@ -1,13 +1,13 @@
 {
   "name": "react-demo",
   "description": "React demo",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "Apache-2.0",
   "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4",
-    "simplicite": "^1.0.5"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.1",
+    "simplicite": "^1.0.6"
   },
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-	"serve": "serve -l 3000 build"
+    "serve": "serve -l 3000 build"
   },
   "repository": {
     "type": "git",
