@@ -21,19 +21,19 @@ Install:
 npm install
 ```
 
-Run in dev mode:
+Run in development mode:
 
 ```bash
 npm start
 ```
 
-Build for prod: 
+Build for production: 
 
 ```bash
 npm run build
 ```
 
-Serve:
+Run in production mode:
 
 ```bash
 npm run serve
