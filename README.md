@@ -4,6 +4,8 @@
 React&reg; demo
 ===============
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=simplicitesoftware_react-demo&metric=alert_status)](https://sonarcloud.io/dashboard?id=simplicitesoftware_react-demo)
+
 This project is a **very basic** web frontend demo written in [React&reg;](https://reactjs.org/), there are two examples:
 
 - One (`src/index.js`) is using the [Simplicit&eacute;&reg; node.js &amp; browser JavaScript library](https://github.com/simplicitesoftware/nodejs-api)
