@@ -44,7 +44,7 @@ class Demo extends React.Component {
 			</div>
 		);
 	}
-};
+}
 
 class DemoProduct extends React.Component {
 	constructor(props) {
@@ -78,7 +78,7 @@ class DemoProduct extends React.Component {
 			</table>
 		);
 	}
-};
+}
 
 ReactDOM.render(
 	<Demo url='https://demo.dev.simplicite.io' username='website' password='simplicite'/>,
