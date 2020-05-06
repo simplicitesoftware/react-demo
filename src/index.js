@@ -24,14 +24,14 @@ class Demo extends React.Component {
 
 	componentWillMount() {
 		let self = this;
-		global.app.login().then(function(params) {
+		global.app.login().then(params => {
 			console.log('Logged in as ' + params.username);
-			global.app.getGrant({ inlinePicture: true }).then(function(grant) {
+			global.app.getGrant({ inlinePicture: true }).then(grant => {
 				self.setState(grant);
 			});
-		}).fail(function(reason) {
+		}).catch(err => {
 			global.app = undefined;
-			self.setState({ error: 'Login failed (status: ' + reason.status + ', message: ' + reason.message + ')' });
+			self.setState({ error: err.message });
 		});
 	}
 
@@ -55,32 +55,28 @@ class DemoProduct extends React.Component {
 	componentWillMount() {
 		let self = this;
 		let prd = global.app.getBusinessObject('DemoProduct');
-		prd.search(null, { inlineThumbs: true }).then(function(list) {
+		prd.search(null, { inlineDocuments: [ 'demoPrdPicture' ] }).then(list => {
 			self.setState({ list: list });
 		});
 	}
 
 	render() {
 		return (
-			<table id='products'>
-				<tbody>
-					{ this.state.list && this.state.list.map(item =>
-					<tr key={ item.row_id }>
-						<td><img alt={ item.demoPrdReference } src={ 'data:image/png;base64,' + item.demoPrdPicture.thumbnail }/></td>
-						<td>
-							<div className='name'>{ item.demoPrdName }</div>
-							<div className='reference'>{ item.demoPrdReference }</div>
-							<div className='description'>{ item.demoPrdDescription }</div>
-						</td>
-					</tr>
-					) }
-				</tbody>
-			</table>
+			<ul>
+				{ this.state.list && this.state.list.map(item =>
+				<li key={ item.row_id }>
+					<img alt={ item.demoPrdReference } src={ 'data:' + item.demoPrdPicture.mime + ';base64,' + item.demoPrdPicture.content }/>
+					<h1 className='name'>{ item.demoPrdName }</h1>
+					<h2 className='reference'>{ item.demoPrdReference }</h2>
+					<p className='description'>{ item.demoPrdDescription }</p>
+				</li>
+				) }
+			</ul>
 		);
 	}
 }
 
 ReactDOM.render(
 	<Demo url='https://demo.dev.simplicite.io' username='website' password='simplicite'/>,
-	document.getElementById('root')
+	document.getElementById('react-demo-products')
 );
