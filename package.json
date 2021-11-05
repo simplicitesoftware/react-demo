@@ -1,18 +1,18 @@
 {
   "name": "react-demo",
   "description": "React demo",
-  "version": "2.1.0",
+  "version": "2.2.7",
   "license": "Apache-2.0",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
-    "simplicite": "^2.1.0"
+    "simplicite": "^2.2.7"
   },
   "devDependencies": {
     "create-react-app": "^4.0.3",
-    "npm-check-updates": "^11.8.5",
-    "serve": "^12.0.1"
+    "npm-check-updates": "^12.0.0",
+    "serve": "^13.0.2"
   },
   "main": "index.js",
   "scripts": {
