@@ -2,7 +2,12 @@
   "name": "react-demo",
   "description": "React demo",
   "version": "2.2.10",
+  "author": "Simplicite Software <contact@simplicitesoftware.com> (http://www.simplicitesoftware.com/)",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simplicitesoftware/react-demo.git"
+  },
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -22,10 +27,6 @@
     "eject": "react-scripts eject",
     "serve": "serve -l 3000 build",
     "ncu": "ncu"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/simplicitesoftware/react-demo.git"
   },
   "browserslist": {
     "production": [
