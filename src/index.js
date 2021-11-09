@@ -7,26 +7,29 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Simplicite from 'simplicite';
+import simplicite from 'simplicite';
 import './index.css';
 
 class Demo extends React.Component {
 	constructor(props) {
 		super(props);
-		global.app = Simplicite.session({
+		global.app = simplicite.session({
 			url: props.url,
 			username: props.username,
 			password: props.password,
 			debug: false
 		});
+		global.app.info('Version: ' + simplicite.constants.MODULE_VERSION);
+		global.app.debug(app.parameters);
 		this.state = {};
 	}
 
 	componentWillMount() {
 		let self = this;
-		global.app.login().then(params => {
-			console.log('Logged in as ' + params.username);
+		global.app.login().then(user => {
+			console.info('Logged in as ' + user.login);
 			global.app.getGrant({ inlinePicture: true }).then(grant => {
+				global.app.debug(grant);
 				self.setState(grant);
 			});
 		}).catch(err => {
@@ -56,6 +59,7 @@ class DemoProduct extends React.Component {
 		let self = this;
 		let prd = global.app.getBusinessObject('DemoProduct');
 		prd.search(null, { inlineDocuments: [ 'demoPrdPicture' ] }).then(list => {
+			global.app.debug(list);
 			self.setState({ list: list });
 		});
 	}
