@@ -1,7 +1,7 @@
 {
   "name": "react-demo",
   "description": "React demo",
-  "version": "2.2.11",
+  "version": "2.2.12",
   "author": "Simplicite Software <contact@simplicitesoftware.com> (http://www.simplicitesoftware.com/)",
   "license": "Apache-2.0",
   "repository": {
@@ -12,7 +12,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
-    "simplicite": "^2.2.11"
+    "simplicite": "^2.2.12"
   },
   "devDependencies": {
     "create-react-app": "^4.0.3",
