@@ -22,7 +22,7 @@ Run in development mode
 ------------------------
 
 ```bash
-npm start
+npm run start
 ```
 
 Build for production
