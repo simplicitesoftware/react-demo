@@ -17,7 +17,8 @@
   "devDependencies": {
     "create-react-app": "^5.0.0",
     "npm-check-updates": "^12.3.1",
-    "serve": "^13.0.2"
+    "serve": "^13.0.2",
+    "jszip-cli": "^1.4.24"
   },
   "main": "index.js",
   "scripts": {
@@ -26,6 +27,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "serve": "serve -l 3000 build",
+    "zip": "jszip -c jszip.config.json",
     "ncu": "ncu"
   },
   "browserslist": {

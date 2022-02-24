@@ -8,6 +8,7 @@
 
 # production
 /build
+/site.zip
 
 # misc
 .DS_Store
@@ -26,5 +27,6 @@ yarn-error.log*
 **.bak
 **.new
 **.tmp
+**.log
 **/Thumbs.db
 **/.DS_Store
