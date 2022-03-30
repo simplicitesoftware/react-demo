@@ -1,12 +1,12 @@
-/*  ___ _            _ _    _ _       
- * / __(_)_ __  _ __| (_)__(_) |_ ___ 
+/*  ___ _            _ _    _ _
+ * / __(_)_ __  _ __| (_)__(_) |_ ___
  * \__ \ | '  \| '_ \ | / _| |  _/ -_)
  * |___/_|_|_|_| .__/_|_\__|_|\__\___|
- *             |_|                    
+ *             |_|
  * This example is using the Simplicite node.js & browser JavaScript API
  */
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOMClient from 'react-dom/client';
 import simplicite from 'simplicite';
 import './index.css';
 
@@ -80,7 +80,4 @@ class DemoProduct extends React.Component {
 	}
 }
 
-ReactDOM.render(
-	<Demo url='https://demo.dev.simplicite.io' username='website' password='simplicite'/>,
-	document.getElementById('react-demo-products')
-);
+ReactDOMClient.createRoot(document.getElementById('react-demo-products')).render(<Demo url='https://demo.dev.simplicite.io' username='website' password='simplicite'/>);
