@@ -1,7 +1,7 @@
 {
   "name": "react-demo",
   "description": "React demo",
-  "version": "2.2.22",
+  "version": "2.2.23",
   "author": "Simplicite Software <contact@simplicitesoftware.com> (http://www.simplicitesoftware.com/)",
   "license": "Apache-2.0",
   "repository": {
@@ -9,16 +9,16 @@
     "url": "git://github.com/simplicitesoftware/react-demo.git"
   },
   "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-scripts": "^5.0.0",
-    "simplicite": "^2.2.22"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "^5.0.1",
+    "simplicite": "^2.2.23"
   },
   "devDependencies": {
-    "create-react-app": "^5.0.0",
-    "npm-check-updates": "^12.5.4",
+    "create-react-app": "^5.0.1",
+    "npm-check-updates": "^13.0.1",
     "serve": "^13.0.2",
-    "jszip-cli": "^1.4.24"
+    "@ffflorian/jszip-cli": "^3.1.6"
   },
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "serve": "serve -l 3000 build",
-    "zip": "jszip -c jszip.config.json",
+    "zip": "rm -f site.zip && cd build && jszip-cli add --ignore *.LICENSE.txt --output ../site.zip .",
     "ncu": "ncu"
   },
   "browserslist": {
