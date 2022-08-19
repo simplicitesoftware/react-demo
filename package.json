@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "create-react-app": "^5.0.1",
+    "npm-check": "^6.0.1",
     "npm-check-updates": "^16.0.5",
     "serve": "^14.0.1",
     "@ffflorian/jszip-cli": "^3.1.6"
@@ -28,6 +29,7 @@
     "eject": "react-scripts eject",
     "serve": "serve -l 3000 build",
     "zip": "rm -f site.zip && cd build && jszip-cli add --ignore *.LICENSE.txt --output ../site.zip .",
+    "check": "npm-check --skip-unused",
     "ncu": "ncu"
   },
   "browserslist": {
