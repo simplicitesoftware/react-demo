@@ -28,7 +28,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "serve": "serve -l 3000 build",
-    "zip": "rm -f site.zip && cd build && jszip-cli add --ignore *.LICENSE.txt --output ../site.zip .",
+    "zip": "rm -f SITE.zip && cd build && jszip-cli add --ignore *.LICENSE.txt --output ../SITE.zip .",
     "check": "npm-check --skip-unused",
     "ncu": "ncu"
   },
