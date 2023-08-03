@@ -1,7 +1,7 @@
 {
   "name": "react-demo",
   "description": "React demo",
-  "version": "2.2.30",
+  "version": "2.2.32",
   "author": "Simplicite Software <contact@simplicitesoftware.com> (http://www.simplicitesoftware.com/)",
   "license": "Apache-2.0",
   "repository": {
@@ -12,14 +12,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
-    "simplicite": "^2.2.30"
+    "simplicite": "^2.2.32"
   },
   "devDependencies": {
-    "@ffflorian/jszip-cli": "^3.1.6",
+    "@ffflorian/jszip-cli": "^3.4.1",
     "create-react-app": "^5.0.1",
     "npm-check": "^6.0.1",
-    "npm-check-updates": "^16.6.2",
-    "serve": "^14.1.2"
+    "npm-check-updates": "^16.10.17",
+    "serve": "^14.2.0"
   },
   "main": "index.js",
   "scripts": {
