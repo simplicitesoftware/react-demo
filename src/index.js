@@ -24,7 +24,7 @@ class Demo extends React.Component {
 		this.state = {};
 	}
 
-	componentWillMount() {
+	componentDidMount() {
 		let self = this;
 		global.app.login().then(user => {
 			console.info('Logged in as ' + user.login);
@@ -55,7 +55,7 @@ class DemoProduct extends React.Component {
 		this.state = {};
 	}
 
-	componentWillMount() {
+	componentDidMount() {
 		let self = this;
 		let prd = global.app.getBusinessObject('DemoProduct');
 		prd.search(null, { inlineDocuments: [ 'demoPrdPicture' ] }).then(list => {
