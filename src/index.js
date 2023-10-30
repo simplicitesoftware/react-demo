@@ -24,18 +24,17 @@ class Demo extends React.Component {
 		this.state = {};
 	}
 
-	componentDidMount() {
-		let self = this;
-		global.app.login().then(user => {
+	async componentDidMount() {
+		try {
+			const user = await global.app.login();
 			console.info('Logged in as ' + user.login);
-			global.app.getGrant({ inlinePicture: true }).then(grant => {
-				global.app.debug(grant);
-				self.setState(grant);
-			});
-		}).catch(err => {
+			const grant = await global.app.getGrant({ inlinePicture: true });
+			global.app.debug(grant);
+			this.setState(grant);
+		} catch(err) {
 			global.app = undefined;
-			self.setState({ error: err.message });
-		});
+			this.setState({ error: err.message });
+		};
 	}
 
 	render() {
@@ -55,13 +54,12 @@ class DemoProduct extends React.Component {
 		this.state = {};
 	}
 
-	componentDidMount() {
+	async componentDidMount() {
 		let self = this;
 		let prd = global.app.getBusinessObject('DemoProduct');
-		prd.search(null, { inlineDocuments: [ 'demoPrdPicture' ] }).then(list => {
-			global.app.debug(list);
-			self.setState({ list: list });
-		});
+		const list = await prd.search(null, { inlineDocuments: [ 'demoPrdPicture' ] });
+		global.app.debug(list);
+		self.setState({ list: list });
 	}
 
 	render() {
