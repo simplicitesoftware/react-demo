@@ -1,7 +1,7 @@
 {
   "name": "react-demo",
   "description": "React demo",
-  "version": "2.3.1",
+  "version": "3.0.0",
   "author": "Simplicite Software <contact@simplicitesoftware.com> (http://www.simplicitesoftware.com/)",
   "license": "Apache-2.0",
   "repository": {
@@ -12,7 +12,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
-    "simplicite": "^2.3.1"
+    "simplicite": "^3.0.0"
   },
   "devDependencies": {
     "@ffflorian/jszip-cli": "^3.6.2",
@@ -29,6 +29,9 @@
     "serve": "serve -l 3000 build",
     "zip": "rm -f SITE.zip && cd build && jszip-cli add --ignore *.LICENSE.txt --output ../SITE.zip .",
     "ncu": "ncu"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "browserslist": {
     "production": [
