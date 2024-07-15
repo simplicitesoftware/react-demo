@@ -79,4 +79,4 @@ class DemoProduct extends React.Component {
 }
 
 // Explicit URL needed for a standalone deployment, remove it when deploying in Simplicité
-ReactDOMClient.createRoot(document.getElementById('react-demo-products')).render(<Demo url='https://demo.dev.simplicite.io' username='website' password='simplicite'/>);
+ReactDOMClient.createRoot(document.getElementById('react-demo-products')).render(<Demo url='https://demo.dev2.simplicite.io' username='website' password='simplicite'/>);

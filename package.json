@@ -15,7 +15,7 @@
     "simplicite": "^3.0.1"
   },
   "devDependencies": {
-    "@ffflorian/jszip-cli": "^3.6.3",
+    "@ffflorian/jszip-cli": "^3.6.4",
     "create-react-app": "^5.0.1",
     "npm-check-updates": "^16.14.20",
     "serve": "^14.2.3"

@@ -1,52 +1,59 @@
+body {
+	background: #000;
+	color: #eee;
+}
 #react-demo {
 	font-family: Helvetica, Arial, sans-serif;
 	text-align: center;
-  }
-  @media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1024px) {
 	#react-demo {
 	  width: 1024px;
 	  margin: 0 auto;
 	}
-  }
-  #react-demo .error {
+}
+ #react-demo .error {
 	background: #FF0000;
 	color: #FFFFFF;
 	padding: 1rem;
 	border-radius: .5rem;
-  }
-  #react-demo img {
+}
+#react-demo img {
 	width: 20rem;
 	max-width: 75%;
-  }
-  #react-demo h1 {
-	color: #222;
+}
+#react-demo img.logo {
+	filter: invert(75%);
+}
+#react-demo h1 {
+	color: #999;
 	font-size: 1.5em;
-  }
-  #react-demo h2 {
+}
+#react-demo h2 {
 	color: #25911e;
 	font-size: 1.25em;
 	font-style: italic;
-  }
-  #react-demo p {
+}
+#react-demo p {
 	color: #777;
-  }
-  #react-demo ul {
+}
+#react-demo ul {
 	list-style-type: none;
 	margin: 0;
 	padding-inline-start: 0;
 	padding-inline-end: 0;
-  }
-  #react-demo li {
-	background-color: #FFFFFF;
+}
+#react-demo li {
+	background-color: #333;
 	display: inline-block;
 	vertical-align: top;
-	border: solid .0625rem #eee;
+	border: solid .0625rem #222;
 	border-radius: .5rem;
-	box-shadow: .5rem .5rem 1rem #ddd;
+	box-shadow: .5rem .5rem 1rem #222;
 	margin: 10px;
 	padding: 10px;
 	min-width: 200px;
 	max-width: 250px;
 	height: 350px;
-	overflow: auto;
-  }
+	overflow: hidden;
+}
