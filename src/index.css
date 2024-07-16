@@ -1,10 +1,8 @@
-body {
-	background: #000;
-	color: #eee;
-}
 #react-demo {
 	font-family: Helvetica, Arial, sans-serif;
 	text-align: center;
+	background: #000;
+	color: #eee;
 }
 @media screen and (min-width: 1024px) {
 	#react-demo {
@@ -19,10 +17,10 @@ body {
 	border-radius: .5rem;
 }
 #react-demo img {
-	width: 20rem;
 	max-width: 75%;
 }
-#react-demo img.logo {
+#react-demo > img {
+	width: 20rem;
 	filter: invert(75%);
 }
 #react-demo h1 {
@@ -50,10 +48,9 @@ body {
 	border: solid .0625rem #222;
 	border-radius: .5rem;
 	box-shadow: .5rem .5rem 1rem #222;
-	margin: 10px;
-	padding: 10px;
-	min-width: 200px;
-	max-width: 250px;
-	height: 350px;
+	margin: .75rem;
+	padding: .75rem;
+	width: 15rem;
+	height: 22.5rem;
 	overflow: hidden;
 }
