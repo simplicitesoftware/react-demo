@@ -2,18 +2,10 @@ import react from "eslint-plugin-react";
 import globals from "globals";
 
 export default [{
-    plugins: {
-        react,
-    },
+    plugins: { react },
     languageOptions: {
-        parserOptions: {
-            ecmaFeatures: {
-                jsx: true,
-            },
-        },
-        globals: {
-          ...globals.browser,
-        },
+        parserOptions: { ecmaFeatures: { jsx: true } },
+        globals: { ...globals.browser }
     },
     rules: {
         "indent": ["error", "tab"],
@@ -21,6 +13,6 @@ export default [{
         "semi": ["error", "always"],
         "no-multiple-empty-lines": ["error", { max: 1 }],
         "no-multi-spaces": "error",
-        "no-trailing-spaces": [ "error", { skipBlankLines: false } ]
+        "no-trailing-spaces": ["error", { skipBlankLines: false }]
     }
 }];
