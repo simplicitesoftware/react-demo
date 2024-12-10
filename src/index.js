@@ -66,12 +66,12 @@ class DemoProduct extends React.Component {
 		return (
 			<ul>
 				{ this.state.list && this.state.list.map(item =>
-				<li key={ item.row_id }>
-					<img alt={ item.demoPrdReference } src={ 'data:' + item.demoPrdPicture.mime + ';base64,' + item.demoPrdPicture.content }/>
-					<h1 className='name'>{ item.demoPrdName }</h1>
-					<h2 className='reference'>{ item.demoPrdReference }</h2>
-					<p className='description'>{ item.demoPrdDescription }</p>
-				</li>
+					<li key={ item.row_id }>
+						<img alt={ item.demoPrdReference } src={ 'data:' + item.demoPrdPicture.mime + ';base64,' + item.demoPrdPicture.content }/>
+						<h1 className='name'>{ item.demoPrdName }</h1>
+						<h2 className='reference'>{ item.demoPrdReference }</h2>
+						<p className='description'>{ item.demoPrdDescription }</p>
+					</li>
 				) }
 			</ul>
 		);

@@ -4,12 +4,7 @@
 React&reg; demo
 ===============
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=simplicitesoftware_react-demo&metric=alert_status)](https://sonarcloud.io/dashboard?id=simplicitesoftware_react-demo)
-
-This project is a **very basic** web frontend demo written in [React&reg;](https://reactjs.org/), there are two examples:
-
-- One (`src/index.js`) is using the [Simplicit&eacute;&reg; node.js&reg; &amp; brower JavaScript API](https://www.npmjs.com/package/simplicite)
-- The other (`src/index-ajaxlib.js`) is dynamically loading and using the instance's standard Ajax library
+This project is a **very basic** web frontend demo written in [React&reg;](https://reactjs.org/)
 
 Install
 -------
@@ -18,8 +13,15 @@ Install
 npm install
 ```
 
+Check syntax and rules
+----------------------
+
+```bash
+npm run lint
+```
+
 Run in development mode
-------------------------
+-----------------------
 
 ```bash
 npm run start
