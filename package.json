@@ -27,6 +27,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "ncu": "ncu",
     "eslint": "eslint src/**/*.js",
     "stylelint": "stylelint src/**/*.css",
     "lint": "npm run eslint && npm run stylelint",
@@ -35,8 +36,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "serve": "serve -l 3000 build",
-    "zip": "rm -f SITE.zip && cd build && jszip-cli add --ignore *.LICENSE.txt --output ../SITE.zip .",
-    "ncu": "ncu"
+    "zip": "rm -f SITE.zip && cd build && jszip-cli add --ignore *.LICENSE.txt --output ../SITE.zip ."
   },
   "engines": {
     "node": ">=18"
