@@ -27,7 +27,9 @@
   },
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/**.js && stylelint src/**.css",
+    "eslint": "eslint src/**/*.js",
+    "stylelint": "stylelint src/**/*.css",
+    "lint": "npm run eslint && npm run stylelint",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
