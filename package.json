@@ -28,7 +28,7 @@
   "main": "index.js",
   "scripts": {
     "ncu": "ncu",
-    "eslint": "eslint src/**/*.js",
+    "eslint": "eslint *.mjs src/**/*.js",
     "stylelint": "stylelint src/**/*.css",
     "lint": "npm run eslint && npm run stylelint",
     "start": "react-scripts start",
