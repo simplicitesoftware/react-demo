@@ -18,9 +18,9 @@
     "@ffflorian/jszip-cli": "3.8.2",
     "create-react-app": "5.0.1",
     "eslint": "9.17.0",
-    "eslint-plugin-react": "7.37.2",
+    "eslint-plugin-react": "7.37.3",
     "globals": "15.14.0",
-    "npm-check-updates": "17.1.11",
+    "npm-check-updates": "17.1.13",
     "serve": "14.2.4",
     "stylelint": "16.12.0",
     "stylelint-config-standard": "36.0.1"
