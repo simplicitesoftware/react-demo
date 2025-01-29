@@ -17,12 +17,12 @@
   "devDependencies": {
     "@ffflorian/jszip-cli": "3.8.2",
     "create-react-app": "5.0.1",
-    "eslint": "9.18.0",
+    "eslint": "9.19.0",
     "eslint-plugin-react": "7.37.4",
     "globals": "15.14.0",
     "npm-check-updates": "17.1.14",
     "serve": "14.2.4",
-    "stylelint": "16.13.2",
+    "stylelint": "16.14.1",
     "stylelint-config-standard": "37.0.0"
   },
   "main": "index.js",
