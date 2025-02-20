@@ -16,10 +16,10 @@
   },
   "devDependencies": {
     "@ffflorian/jszip-cli": "3.8.2",
-    "create-react-app": "5.0.1",
-    "eslint": "9.19.0",
+    "create-react-app": "5.1.0",
+    "eslint": "9.20.1",
     "eslint-plugin-react": "7.37.4",
-    "globals": "15.14.0",
+    "globals": "16.0.0",
     "npm-check-updates": "17.1.14",
     "serve": "14.2.4",
     "stylelint": "16.14.1",
