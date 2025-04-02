@@ -9,8 +9,8 @@
     "url": "git://github.com/simplicitesoftware/react-demo.git"
   },
   "dependencies": {
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
     "react-scripts": "5.0.1",
     "simplicite": "3.0.3"
   },
@@ -22,7 +22,7 @@
     "globals": "16.0.0",
     "npm-check-updates": "17.1.16",
     "serve": "14.2.4",
-    "stylelint": "16.16.0",
+    "stylelint": "16.17.0",
     "stylelint-config-standard": "37.0.0"
   },
   "main": "index.js",
