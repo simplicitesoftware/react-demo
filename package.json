@@ -1,18 +1,18 @@
 {
   "name": "react-demo",
   "description": "React demo",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "author": "Simplicite Software <contact@simplicitesoftware.com> (http://www.simplicitesoftware.com/)",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/simplicitesoftware/react-demo.git"
   },
+  "type": "module",
   "dependencies": {
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "react-scripts": "5.0.1",
-    "simplicite": "3.1.2"
+    "simplicite": "3.1.3"
   },
   "devDependencies": {
     "@ffflorian/jszip-cli": "3.8.5",
@@ -23,7 +23,9 @@
     "npm-check-updates": "18.0.1",
     "serve": "14.2.4",
     "stylelint": "16.19.1",
-    "stylelint-config-standard": "38.0.0"
+    "stylelint-config-standard": "38.0.0",
+    "vite": "6.3.5",
+    "@vitejs/plugin-react": "4.4.1"
   },
   "main": "index.js",
   "scripts": {
@@ -31,10 +33,8 @@
     "eslint": "eslint *.mjs src/**/*.js",
     "stylelint": "stylelint src/**/*.css",
     "lint": "npm run eslint && npm run stylelint",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "start": "vite",
+    "build": "vite build",
     "serve": "serve -l 3000 build",
     "zip": "rm -f SITE.zip && cd build && jszip-cli add --ignore *.LICENSE.txt --output ../SITE.zip ."
   },
