@@ -5,82 +5,10 @@
  *             |_|
  * This example is using the Simplicite node.js & browser JavaScript API
  */
-import * as React from 'react';
+import * as React from 'react'; // eslint-disable-line no-unused-vars
 import * as ReactDOMClient from 'react-dom/client';
-import simplicite from 'simplicite';
+import Demo from './demo.jsx'; // eslint-disable-line no-unused-vars
 import './index.css';
-
-let app;
-
-// eslint-disable-next-line no-unused-vars
-class Demo extends React.Component {
-  constructor(props) {
-    super(props);
-    app = simplicite.session({
-      url: props.url,
-      username: props.username,
-      password: props.password,
-      debug: false
-    });
-    app.info(`Version: ${app.getModuleVersion()}`);
-    app.debug(app.parameters);
-    this.state = {};
-  }
-
-  async componentDidMount() {
-    try {
-      const user = await app.login();
-      app.info(`Logged in as ${user.login}`);
-      const grant = await app.getGrant({ inlinePicture: true });
-      app.debug(grant);
-      this.setState(grant);
-    } catch(err) {
-      app = undefined;
-      this.setState({ error: err.message });
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        { this.state.error && <div className='error'>Error: { this.state.error }</div> }
-        { this.state.login && <div>Hello { this.state.login }!</div> }
-        { this.state.login && <DemoProduct/> }
-      </div>
-    );
-  }
-}
-
-// eslint-disable-next-line no-unused-vars
-class DemoProduct extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  async componentDidMount() {
-    let self = this;
-    let prd = app.getBusinessObject('DemoProduct');
-    const list = await prd.search(null, { inlineDocuments: [ 'demoPrdPicture' ] });
-    app.debug(list);
-    self.setState({ list: list });
-  }
-
-  render() {
-    return (
-      <ul>
-        { this.state.list && this.state.list.map(item =>
-          <li key={ item.row_id }>
-            <img alt={ item.demoPrdReference } src={ 'data:' + item.demoPrdPicture.mime + ';base64,' + item.demoPrdPicture.content }/>
-            <h1 className='name'>{ item.demoPrdName }</h1>
-            <h2 className='reference'>{ item.demoPrdReference }</h2>
-            <p className='description'>{ item.demoPrdDescription }</p>
-          </li>
-        ) }
-      </ul>
-    );
-  }
-}
 
 // Explicit URL needed for a standalone deployment, remove it when deploying in Simplicité
 ReactDOMClient.createRoot(document.getElementById('react-demo-products')).render(<Demo url='https://demo.dev2.simplicite.io' username='website' password='simplicite'/>);
