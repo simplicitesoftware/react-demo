@@ -1,9 +1,12 @@
-import react from 'eslint-plugin-react';
+import js from '@eslint/js';
 import globals from 'globals';
+import reactPlugin from 'eslint-plugin-react';
 
 export default [
+  js.configs.recommended,
   {
-    plugins: { react },
+    files: [ '**/*.jsx' ],
+    plugins: { reactPlugin },
     languageOptions: {
       parserOptions: { ecmaFeatures: { jsx: true } },
       globals: { ...globals.browser }
@@ -14,7 +17,9 @@ export default [
       'semi': ['error', 'always'],
       'no-multiple-empty-lines': ['error', { max: 1 }],
       'no-multi-spaces': 'error',
-      'no-trailing-spaces': ['error', { skipBlankLines: false }]
+      'no-trailing-spaces': ['error', { skipBlankLines: false }],
+      'no-console': 'error',
+      'no-debugger': 'error'
     }
   }
 ];

@@ -12,6 +12,7 @@ import './index.css';
 
 let app;
 
+// eslint-disable-next-line no-unused-vars
 class Demo extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +30,7 @@ class Demo extends React.Component {
   async componentDidMount() {
     try {
       const user = await app.login();
-      console.info(`Logged in as ${user.login}`);
+      app.info(`Logged in as ${user.login}`);
       const grant = await app.getGrant({ inlinePicture: true });
       app.debug(grant);
       this.setState(grant);
@@ -50,6 +51,7 @@ class Demo extends React.Component {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 class DemoProduct extends React.Component {
   constructor(props) {
     super(props);

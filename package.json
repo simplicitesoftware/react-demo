@@ -16,26 +16,25 @@
   },
   "devDependencies": {
     "@ffflorian/jszip-cli": "3.8.5",
+    "@vitejs/plugin-react": "4.4.1",
     "create-react-app": "5.1.0",
     "eslint": "9.27.0",
     "eslint-plugin-react": "7.37.5",
     "globals": "16.1.0",
     "npm-check-updates": "18.0.1",
-    "serve": "14.2.4",
     "stylelint": "16.19.1",
     "stylelint-config-standard": "38.0.0",
-    "vite": "6.3.5",
-    "@vitejs/plugin-react": "4.4.1"
+    "vite": "6.3.5"
   },
   "main": "index.js",
   "scripts": {
     "ncu": "ncu",
-    "eslint": "eslint *.mjs src/**/*.js",
-    "stylelint": "stylelint src/**/*.css",
+    "eslint": "eslint \"src/**/*.jsx\"",
+    "stylelint": "stylelint \"src/*.css\"",
     "lint": "npm run eslint && npm run stylelint",
     "start": "vite",
-    "build": "vite build",
-    "serve": "serve -l 3000 build",
+    "build": "npm run lint && vite build",
+    "serve": "vite preview",
     "zip": "rm -f SITE.zip && cd build && jszip-cli add --ignore *.LICENSE.txt --output ../SITE.zip ."
   },
   "engines": {
