@@ -29,8 +29,8 @@
   "main": "index.js",
   "scripts": {
     "ncu": "ncu",
-    "eslint": "eslint \"src/**/*.jsx\"",
-    "stylelint": "stylelint \"src/*.css\"",
+    "eslint": "eslint --fix \"*.mjs\" \"src/**/*.jsx\"",
+    "stylelint": "stylelint --fix \"src/*.css\"",
     "lint": "npm run eslint && npm run stylelint",
     "start": "vite",
     "build": "npm run lint && vite build",
