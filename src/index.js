@@ -19,7 +19,7 @@ class Demo extends React.Component {
       password: props.password,
       debug: false
     });
-    global.app.info('Version: ' + simplicite.constants.MODULE_VERSION);
+    global.app.info(`Version: ${global.app.getModuleVersion()}`);
     global.app.debug(app.parameters);
     this.state = {};
   }
@@ -27,7 +27,7 @@ class Demo extends React.Component {
   async componentDidMount() {
     try {
       const user = await global.app.login();
-      console.info('Logged in as ' + user.login);
+      console.info(`Logged in as ${user.login}`);
       const grant = await global.app.getGrant({ inlinePicture: true });
       global.app.debug(grant);
       this.setState(grant);
