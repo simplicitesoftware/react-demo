@@ -10,21 +10,21 @@
   },
   "type": "module",
   "dependencies": {
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "simplicite": "3.1.4"
   },
   "devDependencies": {
-    "@ffflorian/jszip-cli": "3.10.1",
-    "@vitejs/plugin-react": "5.1.1",
+    "@ffflorian/jszip-cli": "3.12.8",
+    "@vitejs/plugin-react": "5.1.2",
     "create-react-app": "5.1.0",
-    "eslint": "9.39.1",
+    "eslint": "9.39.2",
     "eslint-plugin-react": "7.37.5",
     "globals": "16.5.0",
-    "npm-check-updates": "19.1.2",
-    "stylelint": "16.25.0",
+    "npm-check-updates": "19.2.0",
+    "stylelint": "16.26.1",
     "stylelint-config-standard": "39.0.1",
-    "vite": "7.2.2"
+    "vite": "7.2.7"
   },
   "main": "index.js",
   "scripts": {
