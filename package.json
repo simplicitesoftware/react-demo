@@ -1,7 +1,7 @@
 {
   "name": "react-demo",
   "description": "React demo",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "author": "Simplicite Software <contact@simplicitesoftware.com> (http://www.simplicitesoftware.com/)",
   "license": "Apache-2.0",
   "repository": {
@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "simplicite": "3.1.4"
+    "simplicite": "3.1.5"
   },
   "devDependencies": {
     "@eslint/js": "9.39.3",
@@ -21,8 +21,8 @@
     "create-react-app": "5.1.0",
     "eslint": "9.39.3",
     "eslint-plugin-react": "7.37.5",
-    "globals": "17.3.0",
-    "npm-check-updates": "19.5.0",
+    "globals": "17.4.0",
+    "npm-check-updates": "19.6.3",
     "stylelint": "17.4.0",
     "stylelint-config-standard": "40.0.0",
     "vite": "7.3.1"
