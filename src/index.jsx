@@ -5,9 +5,8 @@
  *             |_|
  * This example is using the Simplicite node.js & browser JavaScript API
  */
-import * as React from 'react'; // eslint-disable-line no-unused-vars
 import * as ReactDOMClient from 'react-dom/client';
-import Demo from './demo.jsx'; // eslint-disable-line no-unused-vars
+import Demo from './demo.jsx';
 import './index.css';
 
 // Explicit URL needed for a standalone deployment, remove it when deploying in Simplicité

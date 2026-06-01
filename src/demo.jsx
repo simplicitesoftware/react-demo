@@ -1,6 +1,6 @@
 import simplicite from 'simplicite';
 import * as React from 'react';
-import DemoProduct from './demoproduct.jsx'; // eslint-disable-line no-unused-vars
+import DemoProduct from './demoproduct.jsx';
 
 export default class Demo extends React.Component {
   constructor(props) {
